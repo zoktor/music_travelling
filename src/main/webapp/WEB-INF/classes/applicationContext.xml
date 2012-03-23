@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       ">
+	<context:spring-configured />
+	<context:component-scan base-package="eu.musictraveler.*" />
+	<!-- <oxm:jibx-marshaller id="marshaller" target-class="ee.sampo.agreementsmodule.agreement.endpoint.AgreementRequest"/> -->
+
+	<!-- <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer"> 
+		<property name="configLocation" value="classpath:velocity.properties"/> </bean> 
+		<bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver"> 
+		<property name="cache" value="true" /> <property name="prefix" value="ee/sampo/agreementsmodule/" 
+		/> <property name="suffix" value=".vm" /> <property name="contentType" value="text/html; 
+		charset=UTF-8" /> <property name="exposeSpringMacroHelpers" value="true" 
+		/> <property name="toolboxConfigLocation" value="/WEB-INF/velocityToolbox.xml" 
+		/> <property name="viewClass" value="ee.sampo.agreementsmodule.general.view.AgreementsModuleVelocityView" 
+		/> </bean> -->
+
+	<!-- <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> 
+		<property name="defaultLocale" value="et" /> </bean> -->
+
+	<!-- <bean id="messageSource" class="ee.sampo.gateway.general.DatabaseMessageSource" 
+		depends-on="propagator"> <property name="useCodeAsDefaultMessage" value="true" 
+		/> </bean> <bean id="messageSourceAccessor" class="org.springframework.context.support.MessageSourceAccessor"> 
+		<constructor-arg index="0" ref="messageSource" /> </bean> <bean id="listWidgetTool" 
+		class="ee.sampo.gateway.general.list.ListWidgetTool" /> -->
+	<!-- <mvc:annotation-driven /> <mvc:interceptors> <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" 
+		/> </mvc:interceptors> Cache static resources for one year <mvc:resources 
+		mapping="/gfx/**" location="/gfx/" cache-period="31536000" /> <mvc:resources 
+		mapping="/js/**" location="/js/" cache-period="31536000" /> <mvc:resources 
+		mapping="/error/**" location="/error/" cache-period="31536000" /> -->
+</beans>

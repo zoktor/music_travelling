@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///home/nikem/workspace/ark/test.xsl"?>
+<ivy-module version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+  
+    <info organisation="pesh" module="taxi">
+        <ivyauthor name="pesh" url="" />
+    </info>
+
+    <configurations>
+        <conf name="build" extends="runtime,src" description="Modules needed only for building application from source" />
+        <conf name="runtime" description="Modules needed for running application" />
+        <conf name="src" description="Sources of used jars" />
+    </configurations>
+
+    <dependencies>
+        <!-- runtime -->
+        <!-- <dependency org="com.jamonapi" name="com.springsource.com.jamonapi" rev="2.4.0" /> -->
+        <dependency org="commons-dbcp" name="commons-dbcp" rev="1.4" conf="src,runtime->default" />
+        <dependency org="commons-pool" name="commons-pool" rev="1.5.5" conf="src,runtime->default" />
+        <dependency org="javax.servlet" name="com.springsource.javax.servlet.jsp.jstl" rev="1.2.0" conf="src,runtime->runtime" />
+        <dependency org="javax.validation" name="com.springsource.javax.validation" rev="1.0.0.GA" conf="src,runtime->runtime" />
+        <dependency org="joda-time" name="joda-time" rev="1.6.2" conf="src,runtime->default"/>
+     <!--  -->   <dependency org="junit" name="junit" rev="4.8.2" conf="src,runtime->default" />
+        <dependency org="org.apache.log4j" name="com.springsource.org.apache.log4j" rev="1.2.16" conf="src,runtime->runtime" />
+      
+       <!--  <dependency org="org.easymock" name="easymock" rev="3.0" conf="src,runtime->default" />
+        <dependency org="org.hibernate" name="hibernate-validator-annotation-processor" rev="4.2.0.Final" conf="src,runtime->default" />
+         --><!-- <dependency org="org.jibx" name="jibx-run" rev="1.2.3" conf="src,runtime->default"/>
+        <dependency org="org.jibx" name="jibx-bind" rev="1.2.3" conf="build->default"/> -->
+       <dependency org="org.springframework" name="org.springframework.jdbc" rev="3.0.6.RELEASE" />
+        <!--  <dependency org="org.springframework" name="org.springframework.test" rev="3.0.6.RELEASE" />
+        <dependency org="org.springframework.ws" name="org.springframework.xml" rev="2.0.0.RELEASE" />
+ -->
+ <dependency org="org.springframework" name="org.springframework.web" rev="3.0.5.RELEASE" /> 
+ <dependency org="org.springframework.security" name="org.springframework.security.core" rev="3.0.4.RELEASE" /> 
+ <dependency org="org.springframework.security" name="org.springframework.security.web" rev="3.0.4.RELEASE" /> 
+ <dependency org="org.springframework.security" name="org.springframework.security.config" rev="3.0.4.RELEASE" /> 
+
+<!--  <dependency org="org.springframework" name="spring-web" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-core" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-context" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-beans" rev="3.1.0.RELEASE" conf="src,runtime->default"/>     
+ <dependency org="org.springframework" name="spring-aspects" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-tx" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-jdbc" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.springframework" name="spring-webmvc" rev="3.1.0.RELEASE" conf="src,runtime->default"/>
+ <dependency org="org.aspectj" name="aspectjrt" rev="1.6.12" conf="src,runtime->default"/>
+ 
+ <dependency org="com.vaadin" name="vaadin" rev="6.7.3" conf="src,runtime->default"/>
+  -->
+
+        <dependency org="org.apache.wicket" name="wicket" rev="1.5.3" conf="src,runtime->default"/>
+     	<dependency org="org.apache.wicket" name="wicket-auth-roles" rev="1.5.3" conf="src,runtime->default"/>
+        <dependency org="org.apache.wicket" name="wicket-spring" rev="1.5.3" conf="src,runtime->default"/>
+        <dependency org="org.apache.wicket" name="wicket-extensions" rev="1.5.3" conf="src,runtime->default"/>
+        <dependency org="org.wicketstuff" name="push-cometd" rev="1.5-RC5.1" conf="src,runtime->default"/>
+       <!--  <dependency org="org.wicketstuff" name="annotation" rev="1.4.19" conf="src,runtime->default"/> -->
+        <dependency org="com.google.code.jqwicket" name="jqwicket" rev="0.8" conf="src,runtime->default"/>
+        
+         <dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="1.9.3" conf="src,runtime->default"/>
+        
+        
+        <exclude type="src" ext="jar" conf="runtime" />
+        <exclude type="license" ext="txt" />
+    </dependencies>
+</ivy-module>

@@ -1,0 +1,20 @@
+<ivysettings>
+    <settings defaultResolver="chain" />
+    <resolvers>
+        <chain name="chain">
+            <url name="com.springsource.repository.bundles.release">
+                <ivy pattern="http://repository.springsource.com/ivy/bundles/release/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+                <artifact pattern="http://repository.springsource.com/ivy/bundles/release/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+            </url>
+            <url name="com.springsource.repository.bundles.external">
+                <ivy pattern="http://repository.springsource.com/ivy/bundles/external/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+                <artifact pattern="http://repository.springsource.com/ivy/bundles/external/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+            </url>
+            <ibiblio name="central" m2compatible="true"/>
+            <ibiblio name="mvnrepository" root="http://mvnrepository.com/artifact" m2compatible="true" />
+            <ibiblio name="maven2" m2compatible="true"/>
+            <ibiblio name="jdigidoc" root="http://id.smartlink.ee/repo/mvnrepo" usepoms="false" m2compatible="true" />     
+       		<ibiblio name="googlecode" root="http://jqwicket.googlecode.com/svn/m2-repo/releases/" m2compatible="true"/>
+        </chain>
+    </resolvers>
+</ivysettings>

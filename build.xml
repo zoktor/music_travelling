@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+        <!ENTITY general SYSTEM "build-general.xml">
+         
+]>
+
+<project name="mytaxi-serverside" default="build" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="antlib:org.apache.ivy.ant http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+    <property name="application.name" value="musictraveller" />
+
+    &general;
+
+     
+    <target name="build" depends="compile" description="Default target to use for building the project">
+
+    </target>
+	
+</project>
